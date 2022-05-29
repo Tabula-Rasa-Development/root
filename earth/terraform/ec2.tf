@@ -1,26 +1,3 @@
-# The configuration for the `remote` backend.
-terraform {
-  backend "remote" {
-    # The name of your Terraform Cloud organization.
-    organization = "tabula-rasa-development"
-
-    # The name of the Terraform Cloud workspace to store Terraform state files in.
-    workspaces {
-      name = "root-earth"
-    }
-  }
-  required_providers {
-    aws = {
-      source = "hashicorp/aws"
-    }
-  }
-}
-
-# Configure the AWS Provider
-provider "aws" {
-  region = "us-east-1"
-}
-
 resource "aws_key_pair" "nikolai" {
   key_name   = "nikolai-pubkey"
   public_key = "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCr83a2UQs7f7WPT61OP2BFAulkiiEpT87XY/sg9WknovoLvvoyUoGaKW+BGi135Q76fXCok6ZI/aiEd5liRFGnraItnLidIfVSSgSjAxu53ck4ckGmMpMIynpYZvkqUP7Q9vkv506s0BNqBr/v1u5Jb90S2OFOXDCh6PO3ychTNUOPb2shdg04aAfNu3fyo1wpVcdgchqR/Qt/CXhZQUt5qyKcmZkWOh+xLIlhxa3iDe3DcSQihRsL5sep3neDr+r2vO0g5tVi0X2yuKhV/IxuqnlyHV13OLujrhDKjnlwSFJ6Vsk+3dsZ2KOy6Rfoow/sz7udcbcVZfsKAVbi3TWWD4ufYv6uffjxNlUNRonLBvmJLPeKpScqOcPLjAzBTLoBDUKXaRpHwqjEyeA9ga9PhdAuswgWJpZumRbT/Nqz1SONQHNagYpqBFtELGU5+Td8X6JK+Y58OiqhIDvRNAj3nusqKKJWH6OJQDmnEZHeQcznohE+AmrSaOiKIyV4UZM= nikolairahimi@macbook-pro.lan"
