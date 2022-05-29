@@ -2,10 +2,6 @@ resource "aws_iam_policy" "force_mfa" {
   name        = "Force_MFA"
   description = "This policy allows users to manage their own passwords and MFA devices but nothing else unless they authenticate with MFA."
 
-  tags = {
-    terraform = "true"
-  }
-
   policy = jsonencode(
     {
       Version = "2012-10-17"

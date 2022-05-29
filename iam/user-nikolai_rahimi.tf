@@ -1,9 +1,5 @@
 resource "aws_iam_user" "nikolai_rahimi" {
   name = "nikolai.rahimi"
-
-  tags = {
-    terraform = "true"
-  }
 }
 
 resource "aws_iam_policy_attachment" "nikolai-administrator" {
