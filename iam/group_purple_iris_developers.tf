@@ -17,6 +17,7 @@ resource "aws_iam_group_membership" "purple_iris_developers" {
   group = aws_iam_group.purple_iris_developers.name
   users = [
     aws_iam_user.nikolai_rahimi.name,
+    aws_iam_user.majid.alborji.name,
   ]
 }
 
