@@ -1,3 +1,3 @@
-resource "aws_iam_user" "nikolai_rahimi" {
-  name = "nikolai.rahimi"
+resource "aws_iam_user" "majid_alborji" {
+  name = "majid.alborji"
 }
