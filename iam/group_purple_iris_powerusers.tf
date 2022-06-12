@@ -21,8 +21,8 @@ resource "aws_iam_group_membership" "purple_iris_powerusers" {
   ]
 }
 
-resource "aws_iam_policy" "purple_iris_develop" {
-  name        = "purple-iris-develop-access"
+resource "aws_iam_policy" "purple_iris_poweruser" {
+  name        = "purple-iris-poweruser-access"
   path        = "/"
   description = "Allow user to assume role in Purple Iris - Develop account"
   policy = jsonencode({
@@ -35,7 +35,7 @@ resource "aws_iam_policy" "purple_iris_develop" {
   })
 }
 
-resource "aws_iam_group_policy_attachment" "purple_iris_develop" {
+resource "aws_iam_group_policy_attachment" "purple_iris_poweruser" {
   group      = aws_iam_group.purple_iris_powerusers.name
-  policy_arn = aws_iam_policy.purple_iris_develop.arn
+  policy_arn = aws_iam_policy.purple_iris_poweruser.arn
 }
